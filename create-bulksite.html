@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CAP 2</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Select -->
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <!-- Jquery UI -->
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <!-- Jquery UI Timepicker -->
+    <link href="css/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <!-- jTable -->
+    <link href="css/jtable_basic.css" rel="stylesheet">
+    <!-- Site -->
+    <link href="css/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="site-container">
+        <header>
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="top-navigation">
+                    <div class="container">
+                        <p>Welcome, <span class="text-primary">Admin</span></p>
+                        <a href="index.html" title="log out">Logout</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="imgs/OrangeLogo-50.png" alt="orange"></a>
+                        <h2>CAP2</h2>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="sites.html">Sites</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Counters &amp; Formulas <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="manage-counters.html">Manage Counters</a></li>
+                                    <li><a href="manage-formulas.html">Manage Formulas</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faxination.html">Faxination Tool</a></li>
+                            <li><a href="notification.html">Notifications</a></li>
+                            <li><a href="urgent-plans.html">Urgent Action Plans</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        </header>
+        <!-- /header -->
+        <section class="container title">
+            <h3>Create Bulk Site</h3>
+            <ul class="paging breadcrumb">
+                <li>Create Bulk Site</li>
+                <li><a href="sites.html" title="sites">Sites</a></li>
+            </ul>
+        </section>
+        <section class="container btns-container">
+            <a href="/images/myw3schoolsimage.jpg" class="btn btn-default" download>Download Template</a>
+            <div role="button" class="btn btn-default file-upload">
+                <input type="file" name="download">Import Excel
+            </div>
+            <button type="button" data-toggle="modal" data-target="#notifiModal" class="btn btn-default">Submit</button>
+        </section>
+    </div>
+    <footer>
+        <p><span class="glyphicon glyphicon-copyright-mark"></span>Orange 2016</p>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Select js -->
+    <script src="js/bootstrap-select.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- jQuery UI Timepicker -->
+    <script src="js/jquery-ui-timepicker-addon.min.js"></script>
+    <!-- jTable -->
+    <script src="js/jquery.jtable.min.js"></script>
+    <!-- Site -->
+    <script src="js/site.js"></script>
+</body>
+
+</html>

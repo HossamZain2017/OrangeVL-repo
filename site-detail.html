@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CAP 2</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Select -->
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <!-- Jquery UI -->
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <!-- Jquery UI Timepicker -->
+    <link href="css/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <!-- jTable -->
+    <link href="css/jtable_basic.css" rel="stylesheet">
+    <!-- Site -->
+    <link href="css/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Maintenance Team -->
+    <div class="modal fade" id="mainTeam" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Team Members</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Mohamed Ahmed</p>
+                    <p>Omar Ahmed</p>
+                    <p>Mahmoud Hussam</p>
+                    <p>Mohamed Omar</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <!-- Guard Sites -->
+    <div class="modal fade" id="guardSites" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Guard Sites</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Site 1</p>
+                    <p>Site 2</p>
+                    <p>Site 3</p>
+                    <p>Site 4</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+    <div class="site-container">
+        <header>
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="top-navigation">
+                    <div class="container">
+                        <p>Welcome, <span class="text-primary">Admin</span></p>
+                        <a href="index.html" title="log out">Logout</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="imgs/OrangeLogo-50.png" alt="orange"></a>
+                        <h2>CAP2</h2>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="sites.html">Sites</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Counters &amp; Formulas <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="manage-counters.html">Manage Counters</a></li>
+                                    <li><a href="manage-formulas.html">Manage Formulas</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faxination.html">Faxination Tool</a></li>
+                            <li><a href="notification.html">Notifications</a></li>
+                            <li><a href="urgent-plans.html">Urgent Action Plans</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        </header>
+        <!-- /header -->
+        <section class="container title">
+            <h3>Primary fields - CAP fields</h3>
+            <ul class="paging breadcrumb">
+                <li>Site details</li>
+                <li><a href="sites.html" title="sites">Sites</a></li>
+            </ul>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>ID</label>
+                        <p>12563</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>BSC-RNC</label>
+                        <p>BSC</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Site Name</label>
+                        <p>site name</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Site Code</label>
+                        <p>15CA85</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Maintenance Team</label>
+                        <a href="#mainTeam" title="Maintenance Team" data-toggle="modal">Team One</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Site Type</label>
+                        <p>Site</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Latitude</label>
+                        <p>321.210540</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Longitude</label>
+                        <p>321.210540</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container title">
+            <h3>SOC fields</h3>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSN">SN</label>
+                        <input type="text" name="SN" id="inputSN" class="form-control" required="required" value="2635" title="SN">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputOMCName">OMC name</label>
+                        <input type="text" name="OMCName" id="inputOMCName" class="form-control" required="required" title="omc name">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputGovernorate">Governorate</label>
+                        <!-- http://silviomoreto.github.io/bootstrap-select/methods/ -->
+                        <select id="inputGovernorate" class="form-control selectpicker" title="governorate">
+                            <option>All</option>
+                            <option>Cairo</option>
+                            <option>Alexandria</option>
+                            <option>Giza</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Governorate Rank</label>
+                        <p>2</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSiteRank">Site Rank</label>
+                        <select id="inputSiteRank" class="form-control selectpicker" title="site rank">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCity">City</label>
+                        <!-- http://silviomoreto.github.io/bootstrap-select/methods/ -->
+                        <select id="inputCity" class="form-control selectpicker" title="city">
+                            <option>All</option>
+                            <option>Cairo</option>
+                            <option>Alexandria</option>
+                            <option>Giza</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" name="address" id="inputAddress" class="form-control" required="required" title="Address">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputArea">Area</label>
+                        <input type="text" name="area" id="inputArea" class="form-control" required="required" title="area">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCWDate">CW Date</label>
+                        <input type="text" class="form-control datetimepicker" name="cwdate" id="inputCWDate">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputFCWDate">FCW Date</label>
+                        <input type="text" class="form-control datetimepicker" name="fcwdate" id="inputFCWDate">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputTime">Date</label>
+                        <input type="text" class="form-control datetimepicker" name="time" id="inputTime">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSharedSites">Shared Sites</label>
+                        <select id="inputSharedSites" class="form-control selectpicker" multiple data-selected-text-format="count > 5" title="shared sites">
+                            <option>Mobinil</option>
+                            <option>Vodafone</option>
+                            <option>Etisalat</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputVCode">Vodafone Code</label>
+                        <input type="text" name="vodacode" id="inputVCode" class="form-control" required="required" title="vodafone code">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputMCode">Mobinil Code</label>
+                        <input type="text" name="mobinilcode" id="inputMCode" class="form-control" required="required" title="mobinil code">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputECode">Etisalat Code</label>
+                        <input type="text" name="etisalatcode" id="inputECode" class="form-control" required="required" title="etisalat code">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Contract</label>
+                        <a href="/images/myw3schoolsimage.jpg" title="download contract" download>Download Contract Image</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputContractDate">Contract Date</label>
+                        <input type="text" class="form-control datetimepicker" name="contractdate" id="inputContractDate">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputGuardName">Guard Name</label>
+                        <select id="inputGuardName" class="form-control selectpicker" title="guard name">
+                            <option>Mohamed</option>
+                            <option>Ahmed</option>
+                            <option>Peter</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputGuardPhone">Guard First Phone</label>
+                        <input type="text" class="form-control" name="guardphone" id="inputGuardPhone">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputGuardPhoneSecond">Guard Second Phone</label>
+                        <input type="text" class="form-control" name="guardphonesecond" id="inputGuardPhoneSecond">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Guard Number of Sites</label>
+                        <a href="#guardSites" title="guard sites" data-toggle="modal">4</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSubGuardName">Sub Guard</label>
+                        <select id="inputSubGuardName" class="form-control selectpicker" title="sub guard name">
+                            <option>Mohamed</option>
+                            <option>Ahmed</option>
+                            <option>Peter</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSubGuardPhone">SubGuard First Phone</label>
+                        <input type="text" class="form-control" name="subguardphone" id="inputSubGuardPhone">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSubGuardPhoneSecond">SubGuard Second Phone</label>
+                        <input type="text" class="form-control" name="subguardphonesecond" id="inputSubGuardPhoneSecond">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Sub Guard Number of Sites</label>
+                        <a href="#guardSites" title="guard sites" data-toggle="modal">4</a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCoordinatorName">Coordinator Name</label>
+                        <select id="inputCoordinatorName" class="form-control selectpicker" title="Coordinator name">
+                            <option>Mohamed</option>
+                            <option>Ahmed</option>
+                            <option>Peter</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCoordinatorCode">Coordinator Code</label>
+                        <input type="text" class="form-control" name="coordinatorcode" id="inputCoordinatorCode">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCoordinatorPhone">Coordinator First Phone</label>
+                        <input type="text" class="form-control" name="coordinatorphone" id="inputCoordinatorPhone">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCoordinatorPhoneSecond">Coordinator Second Phone</label>
+                        <input type="text" class="form-control" name="coordinatorphonesecond" id="inputCoordinatorPhoneSecond">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Shift</label>
+                    <div class="form-group radio-inline">
+                        <input type="radio" name="inputShift" checked id="inputMorning">
+                        <label for="inputMorning">Morning</label>
+                    </div>
+                    <div class="form-group radio-inline">
+                        <input type="radio" name="inputShift" id="inputNight">
+                        <label for="inputNight">Night</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label>Camera</label>
+                    <div class="form-group radio-inline">
+                        <input type="radio" name="inputCamera" checked id="inputYes">
+                        <label for="inputYes">Yes</label>
+                    </div>
+                    <div class="form-group radio-inline">
+                        <input type="radio" name="inputCamera" id="inputNo">
+                        <label for="inputNo">No</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCameraType">Camera Type</label>
+                        <select id="inputCameraType" class="form-control selectpicker" title="cameratype">
+                            <option>type 1</option>
+                            <option>type 2</option>
+                            <option>type 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSubcontractor">Subcontractor</label>
+                        <input type="text" class="form-control" name="subcontarctor" id="inputSubcontractor">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSecurityType">Security Type</label>
+                        <select id="inputSecurityType" class="form-control selectpicker" title="securitytype">
+                            <option>type 1</option>
+                            <option>type 2</option>
+                            <option>type 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSitePosition">Site Position</label>
+                        <select id="inputSitePosition" class="form-control selectpicker" title="siteposition">
+                            <option>type 1</option>
+                            <option>type 2</option>
+                            <option>type 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSECType">SEC Type</label>
+                        <select id="inputSECType" class="form-control selectpicker" title="sectype">
+                            <option>type 1</option>
+                            <option>type 2</option>
+                            <option>type 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputElecType">Electricity Type</label>
+                        <select id="inputElecType" class="form-control selectpicker" title="Electricity">
+                            <option>type 1</option>
+                            <option>type 2</option>
+                            <option>type 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div role="button" class="btn btn-default file-upload">
+                        <input type="file" name="upload photos">Photos
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div role="button" class="btn btn-default file-upload">
+                        <input type="file" name="upload file">File
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSiteImportance">Site Importance</label>
+                        <select id="inputSiteImportance" class="form-control selectpicker" title="site importance">
+                            <option>type 1</option>
+                            <option>type 2</option>
+                            <option>type 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputCalenderNote">Calender Note</label>
+                        <input type="text" class="form-control datetimepicker" name="calendernote" id="inputCalenderNote">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-default">Apply Changes to all sites</button>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Nearest 1st site</label>
+                        <p>site one</p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label>Nearest 2st site</label>
+                        <p>site two</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p><span class="glyphicon glyphicon-copyright-mark"></span>Orange 2022</p>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Select js -->
+    <script src="js/bootstrap-select.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- jQuery UI Timepicker -->
+    <script src="js/jquery-ui-timepicker-addon.min.js"></script>
+    <!-- jTable -->
+    <script src="js/jquery.jtable.min.js"></script>
+    <!-- Site -->
+    <script src="js/site.js"></script>
+</body>
+
+</html>

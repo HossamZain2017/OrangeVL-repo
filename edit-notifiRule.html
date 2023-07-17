@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CAP 2</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Select -->
+    <link href="css/bootstrap-select.css" rel="stylesheet">
+    <!-- Jquery UI -->
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <!-- Jquery UI Timepicker -->
+    <link href="css/jquery-ui-timepicker-addon.css" rel="stylesheet">
+    <!-- jTable -->
+    <link href="css/jtable_basic.css" rel="stylesheet">
+    <!-- Site -->
+    <link href="css/site.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="site-container">
+        <header>
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="top-navigation">
+                    <div class="container">
+                        <p>Welcome, <span class="text-primary">Admin</span></p>
+                        <a href="index.html" title="log out">Logout</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="imgs/OrangeLogo-50.png" alt="orange"></a>
+                        <h2>CAP2</h2>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="sites.html">Sites</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Counters &amp; Formulas <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="manage-counters.html">Manage Counters</a></li>
+                                    <li><a href="manage-formulas.html">Manage Formulas</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="faxination.html">Faxination Tool</a></li>
+                            <li class="active"><a href="notification.html">Notifications</a></li>
+                            <li><a href="urgent-plans.html">Urgent Action Plans</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+        </header>
+        <!-- /header -->
+        <section class="container title">
+            <h3>Edit Rule</h3>
+            <ul class="paging breadcrumb">
+                <li>Edit Rule</li>
+                <li><a href="notification.html" title="notification">Notification</a></li>
+            </ul>
+        </section>
+        <section class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputNotificationTypeCreate">Notification Type</label>
+                        <!-- http://silviomoreto.github.io/bootstrap-select/methods/ -->
+                        <select id="inputNotificationTypeCreate" class="form-control selectpicker" title="notification type">
+                            <option>All</option>
+                            <option>Manage access rule</option>
+                            <option>Manage action rule</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row accessRules">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputAccess">Access</label>
+                        <select id="inputAccess" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 2" title="Access">
+                            <option>Access</option>
+                            <option>Departure</option>
+                            <option>Renewal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSites">Sites</label>
+                        <select id="inputSites" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 2" title="Sites">
+                            <option>site one</option>
+                            <option>site two</option>
+                            <option>site three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputActions">Actions</label>
+                        <select id="inputActions" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 2" title="Actions">
+                            <option>WO</option>
+                            <option>UAP</option>
+                            <option>AP</option>
+                            <option>other</option>
+                            <option>Incident</option>
+                            <option>Fax</option>
+                            <option>All</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputActionType">Action Type</label>
+                        <select id="inputActionType" class="form-control selectpicker" title="Action type">
+                            <option>Acceptance</option>
+                            <option>Audited</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group checkbox-inline">
+                        <input type="checkbox" id="inputAuditWeight">
+                        <label for="inputAuditWeight">Audit Weight</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputWN">Weight Number</label>
+                        <input type="text" name="WN" id="inputWN" class="form-control" required="required" title="weight number">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputTo">To</label>
+                        <select id="inputTo" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 4" title="TO">
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group checkbox-inline">
+                        <input type="checkbox" id="inputIncludeChildPools">
+                        <label for="inputIncludeChildPools">include child poosl</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputNotificationType">Notification Type</label>
+                        <select id="inputNotificationType" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 2" title="Notification type">
+                            <option>Mail</option>
+                            <option>SMS</option>
+                            <option>Push Notification</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row actionRules">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputSitesAction">Sites</label>
+                        <select id="inputSitesAction" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 2" title="Sites">
+                            <option>site one</option>
+                            <option>site two</option>
+                            <option>site three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputActionsActions">Actions</label>
+                        <select id="inputActionsActions" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 2" title="Actions">
+                            <option>WO</option>
+                            <option>UAP</option>
+                            <option>AP</option>
+                            <option>other</option>
+                            <option>Incident</option>
+                            <option>Fax</option>
+                            <option>All</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputActionTypeActions">Action Type</label>
+                        <select id="inputActionTypeActions" class="form-control selectpicker" title="Action type">
+                            <option>Acceptance</option>
+                            <option>Audited</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputToAction">To</label>
+                        <select id="inputToAction" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 4" title="TO">
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                            <option>pool</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group checkbox-inline">
+                        <input type="checkbox" id="inputIncludeChildPoolsAction">
+                        <label for="inputIncludeChildPoolsAction">include child poosl</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="inputNotificationTypeAction">Notification Type</label>
+                        <select id="inputNotificationTypeAction" class="form-control selectpicker" multiple data-live-search="true" data-selected-text-format="count > 2" title="Notification type">
+                            <option>Mail</option>
+                            <option>SMS</option>
+                            <option>Push Notification</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container btns-container">
+            <button type="button" class="btn btn-default">Save</button>
+        </section>
+    </div>
+    <footer>
+        <p><span class="glyphicon glyphicon-copyright-mark"></span>Orange 2016</p>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Select js -->
+    <script src="js/bootstrap-select.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="js/jquery-ui.min.js"></script>
+    <!-- jQuery UI Timepicker -->
+    <script src="js/jquery-ui-timepicker-addon.min.js"></script>
+    <!-- jTable -->
+    <script src="js/jquery.jtable.min.js"></script>
+    <!-- Site -->
+    <script src="js/site.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.table-responsive').jtable({
+            fields: {
+                SN: {
+                    title: 'SN',
+                },
+                ID: {
+                    title: 'ID',
+                },
+                SiteName: {
+                    title: 'Site Name',
+                },
+                SiteCode: {
+                    title: 'Site Code',
+                },
+                SiteType: {
+                    title: 'Site Type',
+                },
+                BscRnc: {
+                    title: 'BSC-RNC',
+                },
+                Governorate: {
+                    title: 'Governorate',
+                },
+                Address: {
+                    title: 'Address',
+                },
+                Area: {
+                    title: 'Area',
+                },
+                GuardName: {
+                    title: 'Guard Name',
+                },
+                Supervisor: {
+                    title: 'Supervisor',
+                },
+                edit: {
+                    title: 'Edit',
+                    sorting: false,
+                    display: function() {
+                        return '<a href="edit-site" class ="btn btn-sm btn-default">Edit</a>';
+                    }
+                },
+                details: {
+                    title: 'Details',
+                    sorting: false,
+                    display: function() {
+                        return '<a href="site-detail.html" class ="btn btn-sm btn-default">Details</a>';
+                    }
+                },
+                delete: {
+                    title: 'Delete',
+                    sorting: false,
+                    display: function() {
+                        return '<a href="#deleteModal" class ="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal">Delete</a>';
+                    }
+                },
+            }
+        });
+        $('.table-responsive').jtable('addRecord', {
+            record: {
+                SN: 'SN',
+                ID: '12587',
+                SiteName: 'Site Name',
+                SiteCode: '15CA8',
+                SiteType: 'Site Type',
+                BscRnc: 'BSC-RNC',
+                Governorate: 'Cairo',
+                Address: 'Address',
+                Area: 'Area',
+                GuardName: 'Guard Name',
+                Supervisor: 'Supervisor',
+            },
+            clientOnly: true,
+        });
+        $('.table-responsive').jtable('addRecord', {
+            record: {
+                SN: 'SN',
+                ID: '12587',
+                SiteName: 'Site Name',
+                SiteCode: '15CA8',
+                SiteType: 'Site Type',
+                BscRnc: 'BSC-RNC',
+                Governorate: 'Cairo',
+                Address: 'Address',
+                Area: 'Area',
+                GuardName: 'Guard Name',
+                Supervisor: 'Supervisor',
+            },
+            clientOnly: true,
+        });
+        $('.jtable').addClass('table');
+    });
+    </script>
+</body>
+
+</html>
